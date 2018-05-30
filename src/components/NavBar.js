@@ -4,7 +4,7 @@ import Recommended from './RecommendedPage';
 import NewReleases from './NewReleasesPage';
 import TextHeader from './Text';
 import TopCharts from './TopChartPage';
-import Home from './Main';
+import webmusic from './Main';
 import { BrowserRouter as Router, Link, Switch, Route, Redirect } from 'react-router-dom';
 
 const NavBar = () => (
@@ -18,7 +18,7 @@ const NavBar = () => (
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item d-inline">
-              <Link to='/Home' className="nav-link">Home</Link>
+              <Link to='/webmusic' className="nav-link">Home</Link>
             </li>
             <li className="nav-item">
               <Link to='/Recommended' className="nav-link">Recommended</Link>
@@ -38,12 +38,12 @@ const NavBar = () => (
         <TextHeader />
       </header>
       <Switch>
-          <Route path='/Home' component={Home} />
+          <Route path='/webmusic' component={webmusic} />
           <Route path='/Recommended' component={Recommended} />
           <Route path='/TopCharts' component={TopCharts} />
           <Route path='/NewReleases' component={NewReleases} /> 
           <Route path='/Artist' component={Artist} />
-          <Redirect from='/' to='/Home' />
+          <Redirect from='/' to='/webmusic' />
       </Switch>
     </div>
   </Router>
